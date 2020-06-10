@@ -20,7 +20,7 @@ title                    : "Site Title"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Matt Wyatt"
-description              : "My Personal blog, whilst mostly CyberSec related will often feature the odd DIY project or random ramblings that occur in my head."
+description              : "My Personal blog, whilst mostly CyberSec related will often feature many things tech, the odd DIY project or random ramblings that occur in my head."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
