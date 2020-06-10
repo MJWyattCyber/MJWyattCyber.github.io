@@ -109,7 +109,7 @@ author:
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/theMJatt"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin-square"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/matt-wyatt-b8b7b6a3/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
