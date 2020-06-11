@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "air" # "dark", "default", "aqua", "contrast", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "WyCyber"
 title_separator          : "|"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : #
 name                     : "Matt Wyatt"
 description              : "My Personal blog, whilst mostly CyberSec related will often feature many things tech, the odd DIY project or random ramblings that occur in my head."
 url                      : "https://MJWyattCyber.github.io"
