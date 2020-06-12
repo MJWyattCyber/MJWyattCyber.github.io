@@ -35,7 +35,7 @@ The resolution at the end will vary to match whatever resolution you are going t
 
 The whole file should now look similar to this:
 
-	![GRUBLoaderScreenshot](/assets/images/GRUBLoader.png)
+![GRUBLoaderScreenshot](/assets/images/GRUBLoader.png)
 
 As the top comment in this file suggests we now need to update grub to apply our changes, to do this run:
 
@@ -72,6 +72,6 @@ This assumes you are running windows as the host OS, open a PowerShell prompt as
 
 Finally, start up the virtual machine if everything was successful you should be met with an archaic looking login prompt, otherwise known as xrdp.
 
-	![XRDP](/assets/images/XRDPSplash.png)
+![XRDP](/assets/images/XRDPSplash.png)
 
 Leave the Xorg in place and login with your virtual machines credentials and voila! A smooth, full screen experience. Bliss. Totally worth it. Honest.
