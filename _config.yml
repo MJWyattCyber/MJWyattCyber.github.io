@@ -15,7 +15,7 @@ remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "air" # "dark", "default", "aqua", "contrast", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-GB"
 title                    : "WyCyber"
 title_separator          : "|"
 subtitle                 : #
