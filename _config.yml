@@ -64,13 +64,13 @@ google:
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification : google5062ffd7299e3746.html
-bing_site_verification   :
+bing_site_verification   : A4F16057169ECAC9F64919F11CC6E71D
 yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "theMJatt"
 facebook:
   username               :
   app_id                 :
