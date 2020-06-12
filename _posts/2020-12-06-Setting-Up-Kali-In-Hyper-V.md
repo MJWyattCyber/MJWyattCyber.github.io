@@ -7,7 +7,7 @@ date: 2020-06-12 13:01
 ---
 
 
-#Getting Started
+# Getting Started
 
 In order to dip my toes into the world of ethical hacking and participating in CTF's such as HackTheBox or CyberSecLabs I was going to need a Kali Box. Everyone and their dog advises on running Kali in a VM, not just so it's isolated but primarily so you don't have to nuke your host operating system in the process... That and not everyone has a spare machine lying around.
 
@@ -17,7 +17,7 @@ Immediately I noticed that Hyper-V's enhanced session option was unavailable, it
 
 Now I'm not saying Hyper-V is bad, and I'm aware it's technically a Type 1 hypervisor so behaves and interacts differently with the hardware. You could be asking why I didn't just switch to using a different hypervisor, and well, I did. I just didn't like it, the UI felt clunky and it felt wrong.. That and me, being stubborn I refused to let a piece of software stop me and was determined to get things working the way I wanted.. Even if it meant a few hours of googling and fiddling. With my ramblings out of the way I'll get into how I resolved the above issues.
 
-##Changing the Resolution
+## Changing the Resolution
 
 Unfortunately there's no easy way to change the screen resolution whilst running your Linux VM in Hyper-V. The way I achieved this was by editing the grub config file. Open the grub config file in your favourite editor of choice:
 
@@ -43,7 +43,7 @@ As the top comment in this file suggests we now need to update grub to apply our
 	
 Finally, reboot the machine, once the machine is back you should have the desired resolution. Victory is near!
 
-##'Fixing' the sluggish feeling
+## 'Fixing' the sluggish feeling
 
 With the resolution resolved I still couldn't remove the feeling that the virtual machine was sluggish, despite giving it a couple of extra cores and plenty of RAM that could satisfy Chrome. After some research it soon became clear that again this was another quirk of using Hyper-V, it seemed the cleanest resolution would be to follow that which is documented on the distributions site:
 
