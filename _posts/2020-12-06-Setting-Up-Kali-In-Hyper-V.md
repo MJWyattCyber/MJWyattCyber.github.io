@@ -1,7 +1,7 @@
 ---
 
 layout: single
-title: "Ironing out the kinks in Kali and Hyper-V"
+title: "Ironing out the kinks with Kali running in Hyper-V"
 date: 2020-06-12 13:01
 
 ---
@@ -35,7 +35,7 @@ The resolution at the end will vary to match whatever resolution you are going t
 
 The whole file should now look similar to this:
 
-	
+	![GRUBLoaderScreenshot](/assets/images/GRUBLoader.png)
 
 As the top comment in this file suggests we now need to update grub to apply our changes, to do this run:
 
@@ -47,7 +47,7 @@ Finally, reboot the machine, once the machine is back you should have the desire
 
 With the resolution resolved I still couldn't remove the feeling that the virtual machine was sluggish, despite giving it a couple of extra cores and plenty of RAM that could satisfy Chrome. After some research it soon became clear that again this was another quirk of using Hyper-V, it seemed the cleanest resolution would be to follow that which is documented on the distributions site:
 
-https://www.kali.org/docs/virtualization/install-hyper-v-kali-guest-vm/
+Click [here](https://www.kali.org/docs/virtualization/install-hyper-v-kali-guest-vm/) for the original post.
 
 For those of you that don't want to open an extra link I'll place the steps below. Full credit goes to the author, mimura1133.
 Open up a terminal and enter the following:
@@ -72,6 +72,6 @@ This assumes you are running windows as the host OS, open a PowerShell prompt as
 
 Finally, start up the virtual machine if everything was successful you should be met with an archaic looking login prompt, otherwise known as xrdp.
 
-	
+	![XRDP](/assets/images/XRDPSplash.png)
 
 Leave the Xorg in place and login with your virtual machines credentials and voila! A smooth, full screen experience. Bliss. Totally worth it. Honest.
