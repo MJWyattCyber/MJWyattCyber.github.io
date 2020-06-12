@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: wide
 title:  "About Me"
 date:   2020-06-12 10:35
 permalink: /about/
