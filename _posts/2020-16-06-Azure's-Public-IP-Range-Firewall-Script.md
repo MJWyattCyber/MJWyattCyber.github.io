@@ -23,4 +23,28 @@ I was tasked with updating the script to deal with the new json file type as wel
 
 At this point, I'd already heckled the author of the original script to inform him that I was messing with his old work, and surprisingly he'd offered his help if I needed it.. (Spoiler: I did). He gave me a useful first pointer to take a look at the command [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-7) which was a life saver! This command takes a json file and converts it to a custom PS Object, this allows you to 'easily' call out certain properties of the json file and iterate through them appropriately. I got to work attempting to get the correct output which could then be used in a firewall rule. I ran into a few issues along the way but luckily the original author was on hand to dangle the carrot down in-front of me and put me on the right track. Seriously, huge shout-outs for not just providing the answer from the get go but making me work to get there! Finally, I had something that returned the right values which could be used to create the firewall rules, at this point I re-used this code with a few naming convention tweaks to suit the new format. You can see a snippet of the script below or [check it out](https://github.com/MJWyattCyber/Azure-Public-IP-Script) on Github.
 
-![ScreenshotofCode](/assets/images/AzureRDGScript.jpg)
+    #Author: Matt Wyatt
+    #Co-Author: Matt Hann
+    #Description: Takes the latest Json file which is placed at $path and adds RDP over 3389 for all services into the local windows firewall.
+
+    $path = "C:\Scripts\AzurePublicIP.Json"
+
+    #Imports the json file which will have to be manually downloaded and placed at the following location and name
+    $import = Get-Content $path | ConvertFrom-Json
+
+    #Grabs all the old rules
+    $oldRules = Get-NetFirewallRule -Group "Azure RDP*"
+
+    #Iterates through the json file, particularly 
+    $firewallRule = foreach($service in $import.values){
+                        if($service.properties.region -eq ""){
+                            $ServiceName = $service.name
+                            $ServiceIPs = $service.properties.addressPrefixes
+                            New-NetFirewallRule -DisplayName "Azure RDP $ServiceName" -Direction Outbound -Protocol TCP -RemotePort 3389 -Group "Azure RDP $((get-date -Format d).ToString())" -Action Allow
+                            Set-NetFirewallRule -DisplayName "Azure RDP $ServiceName" -RemoteAddress $ServiceIPs -Verbose
+                        }
+                    }
+
+    foreach($rule in $oldRules){
+        Remove-NetFirewallRule $rule.Name
+        }
