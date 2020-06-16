@@ -24,7 +24,7 @@ description              : "My Personal blog, whilst mostly CyberSec related wil
 url                      : "https://MJWyattCyber.github.io"
 baseurl                  : # "/MJWyattCyber"
 repository               : "MJWyattCyber/MJWyattCyber.github.io"
-teaser                   : "/assets/images/Default Teaser.jpg"
+teaser                   : # "/assets/images/Default Teaser.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false 
