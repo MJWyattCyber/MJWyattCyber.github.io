@@ -4,6 +4,7 @@ layout: single
 title: "Ironing out the kinks with Kali in Hyper-V"
 date: 2020-06-12 13:01
 categories: [Linux, System Admin]
+classes: wide
 
 ---
 
