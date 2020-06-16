@@ -2,6 +2,8 @@
 layout: single
 title: Azure's Pub
 Teaser: /assets/images/Microsoft/MsSurface.jpg
+categories: [System Admin, Cloud Computing]
+
 ---
 
 Azure's pretty big these days and also pretty common in the workplace, whether it's full cloud, hybrid cloud, 
