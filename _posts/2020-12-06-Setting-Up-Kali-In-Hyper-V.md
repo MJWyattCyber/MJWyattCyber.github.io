@@ -4,11 +4,11 @@ layout: single
 title: "Ironing out the kinks with Kali in Hyper-V"
 date: 2020-06-12 13:01
 categories: [Linux]
+header:
+	teaser: /assets/images/KaliLinux.png
 
 ---
 
-
-# Getting Started
 
 In order to dip my toes into the world of ethical hacking and participating in CTF's such as HackTheBox or CyberSecLabs I was going to need a Kali Box. Everyone and their dog advises on running Kali in a VM, not just so it's isolated but primarily so you don't have to nuke your host operating system in the process... That and not everyone has a spare machine lying around.
 
