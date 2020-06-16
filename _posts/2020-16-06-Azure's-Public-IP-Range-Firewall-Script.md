@@ -26,7 +26,7 @@ At this point, I'd already heckled the author of the original script to inform h
 
 I got to work attempting to get the correct output which could then be used in a firewall rule. I ran into a few issues along the way but luckily the original author was on hand to dangle the carrot down in-front of me and put me on the right track. Seriously, huge shout-outs for not just providing the answer from the get go but making me work to get there! 
 
-Finally, I had something that returned the right values which could be used to create the firewall rules, at this point I re-used this code with a few naming convention tweaks to suit the new format. You can see a snippet of the script below or [check it out](https://github.com/MJWyattCyber/Azure-Public-IP-Script) on Github.
+Finally, I had something that returned the right values which could be used to create the firewall rules, at this point I re-used this code with a few naming convention tweaks to suit the new format. You can see a snippet of the script below or check it out on Github [here.](https://github.com/MJWyattCyber/Azure-Public-IP-Script)
 
     #Author: Matt Wyatt
     #Co-Author: Matt Hann
