@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Azure's Pub
+title: "Azure's Public IP ranges are Changing - Here's a script to help"
 Teaser: /assets/images/Microsoft/MsSurface.jpg
 categories: [System Admin, Cloud Computing]
 
