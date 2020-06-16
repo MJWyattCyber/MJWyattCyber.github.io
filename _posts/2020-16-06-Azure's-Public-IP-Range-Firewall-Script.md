@@ -1,7 +1,7 @@
 ---
 
 layout: single
-title: "Azure's Public IP ranges are Changing - Here's a script to help"
+title: "Azure Public IP ranges are Changing - Here is a script to help"
 date: 2020-06-16 22:06
 categories: [System Admin, Cloud Computing]
 
