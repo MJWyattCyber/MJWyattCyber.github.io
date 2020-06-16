@@ -1,12 +1,10 @@
 ---
-
-layout: single
-title: "Azure Public IP ranges are Changing - Here is a script to help"
-date: 2020-06-16 22:06
+layout: single
+title: "Azure's public IP Ranges Firewall script"
+date: 2020-06-16 22:49
 categories: [System Admin, Cloud Computing]
-
+teaser: /assets/images/MsSurface.jpg
 ---
-
 
 Azure's pretty big these days and also pretty common in the workplace, whether it's full cloud, hybrid cloud, 
 personal use or a combination there is a plethora of services and resources available and it shows no sign of slowing down any time soon. With all of these resources available to us it's utilising an ever growing number of public IP ranges and subnets, this can prove to be a problem when it comes to providing access from an organisations stand point. How do you provide access to the resources whilst maintaining security? There's the two main contenders of a Site-to-Site VPN or an Express Route, however, these can rack up costs pretty quickly. A third option is to route the traffic through a Remote Desktop Gateway. There is one main drawback to this, that being the public IP addresses of Azure's Data Centres need to be allowed through the firewall.
