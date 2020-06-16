@@ -4,6 +4,7 @@ title: "Azure's public IP Ranges Firewall script"
 date: 2020-06-16 22:49
 categories: [System Admin, Cloud Computing]
 teaser: /assets/images/MsSurface.jpg
+classes: wide
 ---
 
 Azure's pretty big these days and also pretty common in the workplace, whether it's full cloud, hybrid cloud, 
@@ -21,7 +22,11 @@ If you're wondering why you should care as you can RDP to your personal resource
 
 I was tasked with updating the script to deal with the new json file type as well as the change of format from region to services. I first took a look at the original script to see what I could re-use and salvage with a few tweaks, thankfully I could keep the concepts behind the iteration of the file the same. All I needed to work out is how PowerShell could deal with json and how to get the script to 'look' at the right properties.
 
-At this point, I'd already heckled the author of the original script to inform him that I was messing with his old work, and surprisingly he'd offered his help if I needed it.. (Spoiler: I did). He gave me a useful first pointer to take a look at the command [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-7) which was a life saver! This command takes a json file and converts it to a custom PS Object, this allows you to 'easily' call out certain properties of the json file and iterate through them appropriately. I got to work attempting to get the correct output which could then be used in a firewall rule. I ran into a few issues along the way but luckily the original author was on hand to dangle the carrot down in-front of me and put me on the right track. Seriously, huge shout-outs for not just providing the answer from the get go but making me work to get there! Finally, I had something that returned the right values which could be used to create the firewall rules, at this point I re-used this code with a few naming convention tweaks to suit the new format. You can see a snippet of the script below or [check it out](https://github.com/MJWyattCyber/Azure-Public-IP-Script) on Github.
+At this point, I'd already heckled the author of the original script to inform him that I was messing with his old work, and surprisingly he'd offered his help if I needed it.. (Spoiler: I did). He gave me a useful first pointer to take a look at the command [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-7) which was a life saver! This command takes a json file and converts it to a custom PS Object, this allows you to 'easily' call out certain properties of the json file and iterate through them appropriately. 
+
+I got to work attempting to get the correct output which could then be used in a firewall rule. I ran into a few issues along the way but luckily the original author was on hand to dangle the carrot down in-front of me and put me on the right track. Seriously, huge shout-outs for not just providing the answer from the get go but making me work to get there! 
+
+Finally, I had something that returned the right values which could be used to create the firewall rules, at this point I re-used this code with a few naming convention tweaks to suit the new format. You can see a snippet of the script below or [check it out](https://github.com/MJWyattCyber/Azure-Public-IP-Script) on Github.
 
     #Author: Matt Wyatt
     #Co-Author: Matt Hann
