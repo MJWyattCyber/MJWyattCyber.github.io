@@ -4,6 +4,8 @@ title: "HTB Walkthough: Servmon"
 date: 2020-06-21 10:27
 teaser: /assets/images/servmoncard.jpg
 categories: [Walkthroughs, Ethical Hacking]
+toc: true
+toc_label: "Table of Contents"
 ---
 
 This was one of my first boxes that I rooted on the HackTheBox platform, with it being retired on the 20th June 2020.
