@@ -1,8 +1,9 @@
 ---
+header:
+    teaser: /assets/images/servmoncard.jpg
+    title: "HTB Walkthough: Servmon"
 layout: single
-title: "HTB Walkthough: Servmon"
 date: 2020-06-21 10:27
-teaser: /assets/images/servmoncard.jpg
 categories: [Walkthroughs, Ethical Hacking]
 toc: true
 toc_label: "Table of Contents"
