@@ -132,7 +132,7 @@ Now time for the fun part, taking our low level user and gaining root.
 
 ## Enumeration, Post-Compromise
 
-That's it folks. Rinse. Repeat. Once we get access we treat the system as if we were an external user again and see what we are working with, the benefit we have is we have access to have a poke around the file system and installed programs. This is where I start, making sure that there is nothing glaringly obvious right off the bat.
+That's it folks. Rinse. Repeat. Once we get access we treat the system as if we were an external user again and see what we are working with, the benefit we have is we have access to poke around the file system and installed programs. This is where I like to start, making sure that there is nothing glaringly obvious right off the bat.
 
 Taking a look around the users directories there isn't anything too interesting here, but over in C:\Program Files\ there is something which catches my eye. A program called 'NSClient++' which isn't installed by default with Windows, anything 'non-standard' is normally worth checking out. If we find a program there are two searches that I like to perform, one being to find any potential docs or guides on the programs setup or interacting with the program. Secondly, to see if there are any known exploits with it from a trusted source such as exploitdb/rapid7 etc.
 
