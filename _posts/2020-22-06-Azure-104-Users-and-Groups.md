@@ -84,7 +84,7 @@ If using the command line is your thing this can also be accomplished via the us
 
 This method requires a little more in terms of input as you need to define a 'Password profile'.
 
-![psuser](assets/images/Az104UsersAndGroups/psnewusers.png)
+![psuser](/assets/images/Az104UsersAndGroups/psnewusers.png)
 
 It's recommended that if the command line method is more your thing then you set up key variables and pass these through, there is also bulk tasks that can be completed which I will cover shortly.
 
