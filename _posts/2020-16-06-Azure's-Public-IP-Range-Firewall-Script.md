@@ -2,7 +2,7 @@
 layout: single
 title: "Azure's public IP Ranges Firewall script"
 date: 2020-06-16 22:49
-categories: [System Admin, Cloud Computing]
+categories: [Scripting]
 teaser: /assets/images/MsSurface.jpg
 classes: wide
 ---
