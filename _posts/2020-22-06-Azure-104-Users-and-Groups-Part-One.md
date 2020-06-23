@@ -1,7 +1,7 @@
 ---
 header:
-    title: "Az-104: Identities and Governance Part 1: Users and Groups"
     teaser: /assets/images/MsSurface.jpg
+title: "Az-104: Identities and Governance Part 1: Users and Groups"
 date: 2020-06-22 19:12
 layout: single
 toc: true
