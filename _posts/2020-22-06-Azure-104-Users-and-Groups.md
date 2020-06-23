@@ -265,7 +265,7 @@ You also have some control over what notifications are sent once SSPR has been c
 
 ## Device Identity
 
-Not all devices that our users have access to our owned by our organisation, because of this there will be times that users will be using a range of devices to connect to our resources which we will want to have some control over. We sometimes want the option to add devices to our AAD in order to track how our users are accessing certain assets. There are three main 'Device registration' options:
+Not all devices that our users have access to are owned by our organisation, because of this there will be times that users will be using a range of devices to connect to our resources which we will want to have some control over. We sometimes want the option to add devices to our AAD in order to track how our users are accessing certain assets. There are three main 'Device registration' options:
 
 ### Azure AD registered
 
