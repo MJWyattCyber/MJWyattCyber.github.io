@@ -18,11 +18,9 @@ First things first it's essential to start at the beginning with the bread and b
 
 It's important to know that within Azure a subscription is associated to a **single Azure AD Directory**, whilst multiple subscriptions can trust the same directory, a subscription can only trust one directory. The same user identity can spread across multiple directories providing access to multiple subscriptions, for example if you had an indivdual subscription for each Dev/Test/Prod envrionment and as such 3 directories. The same user identity could be used across all 3. Likewise you could have a single directory where the users reside and each subscription trust the same directory. 
 
-
 # Managing Users
 
 The user accounts that reside within AAD are granted a set of default permissions, this is determined by the type of the user, the users role assignments and whether or not they own indivdual objects. There are three main types of user accounts in AAD with each type having a different level of access to align with the scope of the work that will be carried out. Now of course this can all be fine tuned and **should** be fine tuned to suit.
-
 
 ### Administrators
 
@@ -30,13 +28,11 @@ Commonly administrators are there to control who is allowed to access certain re
 
 An example of an adminstrative role that could be assigned out to a user would be the role 'User Administrator', this is a built in role which allows users the ability to admin the users within a directory, you'd be able create, edit or delete users, assign roles to thers, reset passwords etc. These tasks would be possible in the portal, via the Azure CLI or PowerShell. I'll cover some of the commands used later.
 
-
 ### Member Users
 
 Member users are your bog standard user, these users are considered internal users to the organisation and will normally have a user account created for them when they join the organisation. Commonly these users will be synced across from Active Directory via Azure AD connect, however this is outside the scope of this post.
 
 Member users have default permissions to enable them to edit their own profile... and that's about it. These users shouldn't be able to manage any other user as standard. These users will commonly end with the same email address, typically this will be the organisation/work addresses. E.g. Joe.Bloggs@contoso.com You can use custom domains here but ownership of the domain will have to be verified by an administrator typically in the form of adding a TXT record with a specified value. Custom domains can be configured from the option **Custom Domain Names** from within the **Manage** section of Azure Active Directory. 
-
 
 ### Guest Users
 
