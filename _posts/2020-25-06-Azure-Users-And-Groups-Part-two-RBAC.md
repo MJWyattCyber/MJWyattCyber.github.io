@@ -63,7 +63,7 @@ By default, the Subscription Owner and User Access Admin roles have these action
 
 ### Using PowerShell
 
-The following command can be used to assign the **Owner** role to another user. 
+The following command can be used to assign the **Owner** role to another user once you yourself hold either Owner or User Access Administrator. 
 
     New-AzRoleAssignment `
         -SignInName “talkie.toaster@exampleaddress.com” `
