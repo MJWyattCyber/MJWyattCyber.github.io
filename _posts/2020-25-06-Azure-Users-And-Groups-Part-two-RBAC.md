@@ -102,7 +102,7 @@ This is referred to as a securtiy principal, but essentially it just means, whic
 
 ### What
 
-This is the role definition of what can be done, utlimately the role will consist of a list in jSon format containing 'actions' and 'not actions' outling this.
+This is the role definition of what can be done, utlimately the role will consist of a list in json format containing 'actions' and 'not actions' outling this.
 
 ### Where
 
@@ -110,7 +110,7 @@ Finally, the scope. As discussed at the start of this article, the scope decides
 
 # Custom roles
 
-In the event that the built-in roles don't suit your needs then you may have to create a custom role, Microsoft recommend that where possible you utilise the built-in roles as there are a few that cover most tasks. However, if a custom role is the way to go then it's recommended you copy the built-in role that is closest to achieving your intended outcome. As with all things Azure the roles are defined in jSon and made of 'Actions' and 'NotActions' essentially Actions say what you can't do and NotActions say what you can not. So for example, the Contributor role has * in it's 'Actions' settings stating it can do anything, then it has 'NotActions' denoting that it can't:
+In the event that the built-in roles don't suit your needs then you may have to create a custom role, Microsoft recommend that where possible you utilise the built-in roles as there are a few that cover most tasks. However, if a custom role is the way to go then it's recommended you copy the built-in role that is closest to achieving your intended outcome. As with all things Azure the roles are defined in json and made of 'Actions' and 'NotActions' essentially Actions say what you can't do and NotActions say what you can not. So for example, the Contributor role has * in it's 'Actions' settings stating it can do anything, then it has 'NotActions' denoting that it can't:
 
  - Delete Roles
  - Create Roles
@@ -126,7 +126,7 @@ In the event that the built-in roles don't suit your needs then you may have to 
 
     az role definition list --name "role name" --output json
 
-In PoerShell this would look like:
+In PowerShell this would look like:
 
     Get-AzRoleDefinition -Name "Role name" | ConvertTo-Json
 
@@ -178,7 +178,7 @@ You can also track the activity of RBAC via the 'Activity log' service within Az
 
 ## Delete Custom Roles
 
-Look, okay. It's not like we didn't warn you that using the built in rules was a good idea... but, you should totally use the built-in roles. If you were stubborn and wanted to have a go yourself, or maybe you no longer have a "need" for a role anymore, then do not fear! You can remove custom roles using Powershell/CLI.
+Look, okay. It's not like I didn't warn you that using a custom rules was a bad idea... If you were stubborn and wanted to have a go yourself (and got it wrong), or maybe you no longer have a "need" for a role anymore, then do not fear! You can remove custom roles using Powershell/CLI.
 
 In the CLI:
 
