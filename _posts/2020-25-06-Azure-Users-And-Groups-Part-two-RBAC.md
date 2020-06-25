@@ -52,10 +52,13 @@ Whilst Azure AD does have its own roles, these are typically only related to use
 -	**Billing Admin:** Able to manage subscriptions, make purchases and monitor service health.
 
 The big takeaway is that Azure RBAC roles are applied to Azure based resources, whilst Azure AD roles are limited to users, groups etc. However, there is one key overlap to be aware of and that is that a Global Admin in Azure AD has the ability to elevate themselves to **User Access Administrator**, this role can then provide access to Azure resources and should be used in the use case that a subscription is lost or someone who managed an azure resource has left and no one else has access. 
+
 ## Assigning admin access to a subscription
 In order to be able to assign other users admin access to a subscription you must have the following permissions in the ‘actions’ area of the role for the subscription scope.
+
 -	Microsoft.Authorisation/rolesAssignments/write
 -	Microsoft.Authorisation/rolesAssignments/delete
+
 By default, the Subscription Owner and User Access Admin roles have these actions. (This will be clarified in the creating an RBAC role later) If using the User Access Admin Role it’s important to revoke access once you are finished. This is performed in the portal by selecting Yes for the ‘Access Management for Azure resources’ option.
 
 ### Using PowerShell
