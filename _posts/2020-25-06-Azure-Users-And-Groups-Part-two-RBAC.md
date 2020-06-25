@@ -2,6 +2,7 @@
 header:
     teaser:
 title: "Az 104: Identities and Goverence Part 2: RBAC Roles"
+date: 2020-06-25 22:10
 categories: [Azure]
 layout: single
 toc: true
