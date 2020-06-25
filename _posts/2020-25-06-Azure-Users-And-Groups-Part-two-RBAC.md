@@ -79,6 +79,7 @@ This can also be done using the CLI:
 		--role “Owner”
 		--subscription <Subscription name or ID>
 
+
 # Securing resources with RBAC
 
 RBAC is great to increase security, and it does this by allowing a fine granularity of control over what users or groups of users have access to what resources, when you add the ability to do this on a per resource basis you can really lock down the items within the subscription(s). This ensure that you follow the least privilege principle and everyone has just enough access to complete their role. It's important to also keep in mind that this is also used when providing applications permissions to access certain resources in a resource group.
@@ -93,7 +94,7 @@ From this blade you can check access, set role assignments and set deny assignme
 
 ## How does RBAC work?
 
-RBAC three main steps, those being the 'Who', who is getting the access?, 'What' access are they getting? and finally 'where'?
+RBAC has three main points to keep in mind, those being the 'Who', who is getting the access?, 'What' access are they getting? and finally 'where'?
 
 ### Who
 
