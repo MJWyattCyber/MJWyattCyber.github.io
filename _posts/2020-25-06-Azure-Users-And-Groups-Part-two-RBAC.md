@@ -11,7 +11,7 @@ toc_title: Table of Contents
 
 This is the second part of Users and Groups within Identity and Management for Azure, I am loosley following along with the Az104 syllabus whilst creating these articles as well as making reference to the Microsoft Learn documentation. Disclaimer: This will not prepare you for the Az104 Exam! This is just a snippet intended to share the knowledge as well as aid myself in preparing for the exam.
 
-Azure RBAC (Role Based Access Control) ultimately allows administrators to control who has access to certain Azure resources, and what level of access is provided. These roles can be applied to groups of users of outlined in part 1 of this series, it can also be applied to applications or service principals. This will be applied at a particular scope such as a resource group, subscription or whole tenant. This fine-grained approach allows administrators to appropriately set the right level of permissions to the right resources. 
+Azure RBAC (Role Based Access Control) ultimately allows administrators to control who has access to certain Azure resources, and what level of access is provided. These roles can be applied to users, groups, applications or service principals. This will be applied at a particular scope such as a resource, resource group, subscription or management group. This fine-grained approach allows administrators to appropriately set the right level of permissions to the right resources. 
 
 ## Built-in roles
 
