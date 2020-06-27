@@ -1,7 +1,7 @@
 ---
 header:
     teaser:
-title: "Az-104 Identities and Governance Parth Three: Resource Management"
+title: "Az-104 Identities and Governance Part 3: Resource Management"
 date: 2020-06-27 08:07
 layout: single
 categories: [Azure]
