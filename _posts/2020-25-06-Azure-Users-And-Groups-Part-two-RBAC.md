@@ -1,7 +1,7 @@
 ---
 header:
     teaser: /assets/images/MsSurface.jpg
-title: "Az-104 Identities and Goverence Part 2: RBAC"
+title: "Az-104 Identities and Governance Part 2: RBAC"
 date: 2020-06-25 22:10
 categories: [Azure]
 layout: single
