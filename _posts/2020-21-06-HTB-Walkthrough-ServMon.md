@@ -4,7 +4,7 @@ header:
 title: "HTB Walkthough: Servmon"
 layout: single
 date: 2020-06-21 10:27
-categories: [Walkthroughs, Ethical Hacking]
+categories: [Walkthroughs]
 toc: true
 toc_label: "Table of Contents"
 ---
