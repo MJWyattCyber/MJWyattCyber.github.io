@@ -68,4 +68,31 @@ Unfortunately this returned no results so there wasn't much further I could go h
 As mentioned in the section above we now have a potential exploit to be carried out, there is the option to run this manually however that's beyond my current understanding. As a result I will be using metasploit, particularaly the module following: /exploit/windows/smb/ms08_067_netapi/
 
 Configuring the options here once the module is selected:
+
 ![msfconsoleoptions](/assets/images/Legacy/metasploitoptions.png)
+
+Here I am setting the target host and confirming the options are set before execution. 
+
+![msfexploitation](/assets/images/Legacy/exploit.png)
+
+Running this returned a shell first time! As this is a meterpreter shell which is built into metasploit we can use 'getuid' to see what level of access we have.
+
+![accesslevel](/assets/images/Legacy/accesslevel.png)
+
+Awesome! We're already Authority system which are the keys to the castle! From here we can grab both the user flags and the root flags.
+
+## User Flag
+
+This flag is located at C:\Documents and Settings\john\Desktop\users.txt
+
+![userflag](/assets/images/Legacy/userflag.png)
+
+## Root Flag
+
+This flag is located at C:\Documents and Settings\Administrator\Desktop\root.txt
+
+![rootflag](/assets/images/Legacy/rootflag.png)
+
+# Summary
+
+That's it for this box! This is the probably the easiest box on the platform, a very nice and simple SMB exploit here. The root cause of the exploit being linked to the operating system being way end of life at this point. A combination of this and old protocols resulted in this being possible.
