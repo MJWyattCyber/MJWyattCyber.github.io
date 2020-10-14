@@ -5,11 +5,11 @@ date: 2020-10-12 19:57
 categories: [Azure]
 ---
 
-If you've ever worked with Azure then chances are you're familiar with Azurea Resource Manager for those that are new to both Azure and automation, ARM Templates is code that defines the infrastructure you wish to deploy. This code will reliably deploy the specified infrastructure in a pre-defined state, allowing administrators and operations teams to deploy the same enviornments and solutions on demand. ARM templates allow you to not only deploy infrastructure but also deploy and tune various other components such as Web Apps and service plans. 
+If you've ever worked with Azure then chances are you're familiar with Azure Resource Manager for those that are new to both Azure and automation, ARM Templates is code that defines the infrastructure you wish to deploy. This code will reliably deploy the specified infrastructure in a pre-defined state, allowing administrators and operations teams to deploy the same enviornments and solutions on demand. ARM templates allow you to not only deploy infrastructure but also deploy and tune various other components such as Web Apps and service plans. 
 
 # Pre-Requisites
 
-There are two main ways to create ARM templates, the first is rather simple and involves provisioning the resource, Azure will automatically generate a template and offer the option to export this. This can then be used to re-provision the resources.
+There are two main ways to create ARM templates, the first is rather simple and involves provisioning the resource, Azure will automatically generate a template and offer the option to export a template. This can then be used to re-provision the resources.
 
 Secondly, and the way that I will cover in this post, is by writing them in a text editor suich as Visual Studio or Visual Studio Code. Both options are free (With visual studio community edition) and both have ways to make writing ARM templates easier. I'll focus on Visual Studio Code as it's what I used personally. To set-up VS: Code to assist there are a few key extensions that will aid in writing these templates, the key one being Azure Resource Manager (ARM) Tools.
 
@@ -23,7 +23,7 @@ ARM Templates are written in JavaScript Object Notation (JSON) and consist of 5 
 
 ## Schema
 
-This tells the ARM template what schema to use for the template file and details the properties that are within a template. Commonly the date within the schema willbe a bit misleading and not recent, this is fine - it simply means that there have been no major changes to the schema. Schema is required in all ARM templates and is the first things that should be populated. 
+This tells the ARM template what schema to use for the template file and details the properties that are within a template. Commonly the date within the schema will be a bit misleading and not recent, this is fine - it simply means that there have been no major changes to the schema. Schema is required in all ARM templates and is the first thing that should be populated. 
 
 ![SchemaScreenshot](/assets/images/ARM/schemascreenshot.png)
 
