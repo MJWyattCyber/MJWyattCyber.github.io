@@ -1,8 +1,10 @@
 ---
 title: "ARM Templates: Getting Started"
 layout: single
-date: 2020-10-12 19:57
+date: 2020-10-14 20:47
 categories: [Azure]
+toc: true
+toc_label: "Table of Contents"
 ---
 
 If you've ever worked with Azure then chances are you're familiar with Azure Resource Manager for those that are new to both Azure and automation, ARM Templates is code that defines the infrastructure you wish to deploy. This code will reliably deploy the specified infrastructure in a pre-defined state, allowing administrators and operations teams to deploy the same enviornments and solutions on demand. ARM templates allow you to not only deploy infrastructure but also deploy and tune various other components such as Web Apps and service plans. 
