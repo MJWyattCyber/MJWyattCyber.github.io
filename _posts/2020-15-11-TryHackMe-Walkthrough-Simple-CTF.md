@@ -43,7 +43,7 @@ This seems as far as we can go here, our permissions are limited and there isn't
 
 Navigating out to the IP address in a browser returns a default apache webpage, whilst this isn't ideal to be on display it doesn't appear that there is a whole lot going here - let's put this through a directory busting tool such as [dirsearch](https://github.com/maurosoria/dirsearch). This quickly returned a directory called 'simple' which we took a look at.
 
-![simplecms](/assets/images/TryHackMe/simplecms.png)
+![simplecms](/assets/images/TryHackMe/SimpleCTF/simplecms.png)
 
 This page is interesting, there is a lot on offer here - particularly versions of software. It seems this webserver is running some kind of 'CMS Made Simple software'. If we scroll to the bottom of the page we can see the version of the software that is being ran, which is 2.2.8. Whenever we find a version it's always worth throwing it at google to see if any exploits are known. In this case it seems there are a few results, in particular a CVE which can be found [here](https://www.exploit-db.com/exploits/46635). As we've enumerated most our options and found a result lets move onto exploitation.
 
