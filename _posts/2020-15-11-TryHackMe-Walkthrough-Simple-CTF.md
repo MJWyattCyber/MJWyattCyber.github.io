@@ -53,11 +53,11 @@ This page is interesting, there is a lot on offer here - particularly versions o
 
 This CVE seems to apply to the software version we have found so let's take a deeper dive. Looking at the the first few lines here we can see we're asked to supply a url, wordlist and a crack option. I've prepared a passwords.txt file to use which is sourced from the github page [here](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials). Time to run the exploit:
 
-![exploit](/assets/images/TryHackMe/exploit.png)
+![exploit](/assets/images/TryHackMe/SimpleCTF/exploit.png)
 
 This took a few minutes but eventually returned the following:
 
-![results](/assets/images/TryHackMe/exploitresults.png)
+![results](/assets/images/TryHackMe/SimpleCTF/exploitresults.png)
 
 Great! Our the exploit worked and I now have a username and password combination, let's try to plug this information into a SSH connection.
 
@@ -65,7 +65,7 @@ Great! Our the exploit worked and I now have a username and password combination
 
 With a username and password we were able to login as our user, sadly this is just a low level user so let's grab our user flag for the box and then take a look at what commands we can run by utilising 'sudo -l'. 
 
-![sudo](/assets/images/TryHackMe/sudo.png)
+![sudo](/assets/images/TryHackMe/SimpleCTF/sudo.png)
 
 I found out that the user can run VIM without the need to enter the root/sudo password, excellent this may be an avenue to exploit. Utilising [GTFOBins](https://gtfobins.github.io/) I searched for VIM > Sudo, I can see I can enter the command:
 
@@ -73,6 +73,6 @@ I found out that the user can run VIM without the need to enter the root/sudo pa
 
 The console can get a bit messy here but if you ever appear to be in VIM then simply type :q! and hit enter which should drop you out to a shell, in my case this worked and running 'whoami' after returning to my shell it returned I was root! To finish up we can navigate to /root/ and grab the root flag. 
 
-![rootflag](/assets/images/TryHackMe/rootflag.png)
+![rootflag](/assets/images/TryHackMe/SimpleCTF/rootflag.png)
 
 Thanks for reading!
