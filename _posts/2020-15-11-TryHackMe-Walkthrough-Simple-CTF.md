@@ -4,7 +4,7 @@ header:
 title: "TryHackMe Walkthrough: Simple CTF"
 date: 2020-11-15 20:57
 categories: [Walkthroughs]
-class: wide
+classes: wide
 layout: single
 ---
 
