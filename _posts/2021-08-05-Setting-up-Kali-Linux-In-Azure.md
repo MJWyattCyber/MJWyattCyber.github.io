@@ -4,7 +4,7 @@ header:
 title: "Setting Up Kali Linux in Azure"
 layout: single
 date: 2021-05-08 21:29
-categories: [Azure],[Linux]
+categories: [Azure]
 classes: wide
 ---
 
