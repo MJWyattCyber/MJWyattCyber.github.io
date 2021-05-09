@@ -10,7 +10,7 @@ classes: wide
 
 I want to start of by saying I am a huge Azure advocate, whilst I appreciate it's not the solution for everyone it does have it's benefits. For only a few pounds a month you can use it to get a Virtual Private Server (VPS) that will pack a punch, and the best part is that if you have a few days where you don't use it, you won't pay for it! What's more having such device seperated from your home network is probably a good idea. One such use case would be to have a Kali instance hosted in Azure, if you're like me and have a career or interest in Cyber Security then you may want to partake in CTF events, or sites such as HackTheBox, TryHackMe etc. You may even want to partake in BugBounties, whilst you could arguably get away with just a lightweight Ubuntu instance for BugBounties, you will still want the device dissasociated from your home network. The one downside to utilising Azure for a Kali instance is that you'll either have to upload your own image to build the machine from or make use of the provided marketplace image, whilst this is convenient to deploy it is out dated. Fear not, during this post I will cover every step needed to deploy the marketplace image, troubleshoot a few issues and run a full update to get your instance running on the latest version.
 
-===
+======
 
 ## Deploying the Kali Virtual Machine
 
@@ -71,7 +71,7 @@ I left the next two options of 'Advanced' and 'Tagging' at the default options, 
 
 Download your SSH key when prompted, this is an important step - do this now to save you hunting for it later, store this somewhere safe.
 
-===
+======
 
 ## Amending the Security Groups
 
@@ -84,7 +84,7 @@ During the VM creation we defined the Inbound ports to be SSH (Port 22) as a res
 
 If you see fit you can of course add other rules in here to control the flow of traffic to your VM, one option may be to setup an RDP rule to allow connections on port 3389, granted this would take a bit of setup on the Kali box to get running but it is possible!
 
-===
+======
 
 ## Connecting to your VM
 
@@ -94,13 +94,13 @@ To connect to your VM you'll need a terminal client installed, a popular well-kn
 
 All being well you should be told that the host is unknown (you haven't connected to it before) and would you like to continue, type 'yes' and hit enter. You should now be logged in!
 
-===
+======
 
 ## Setting up a WinSCP Connection
 
 This section is completely optional so feel free to skip it if you are comfortable with file transers on a Linux machine. There are some times where dealing with a GUI is just a whole lot easier, as such I utilise WinSCP, WinSCP is an open source tool which allows you to set up a connection and copy files to and from the source and target. When you first start WinSCP you are prompted to setup a new connection, enter the public IP addresss of your virtual machine in the hostname, leave the port at 22. Set the username to match your username you selected during setup. Click on the advanced button and a new window will appear, under the SSH setting select authentication. Finally, select the three dots to browse for a private key file, this will open File explorer. Change the file type to show 'All files' and browse to the location of your .pem file. Selecting your .pem file you will be prompted to save this as a .ppk format, continue and save this as a .ppk file in a safe location. You should now be able to press 'Ok' and login via WinSCP to your Kali virtual machine, allowing you to transfer files to and from.
 
-===
+======
 
 ## Updating Kali Linux
 
