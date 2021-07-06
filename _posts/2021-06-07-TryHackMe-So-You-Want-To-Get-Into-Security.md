@@ -1,6 +1,6 @@
 ---
 header:
-    teaser: /assets/images/TryHackMe/tryhackme_logo_full.svg
+    teaser: /assets/images/TryHackMe/tryhackmelogo.png
 title: "So, you want to get started in Cyber Security?"
 date: 2021-07-06 19:52
 layout: single
